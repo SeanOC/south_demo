@@ -16,7 +16,20 @@ Run the following commands to get up and running with the demo app::
 	cd south_demo
 	./manage.py runserver
 	
-Talk Info
-=========
+Talk Video
+==========
 
-To see a recording of the talk you can check it out at (FIXME: add talk url here once it's posted) and the presentation (FIXME: add prezi url once it's ready).
+To see a recording of the talk you can check it out at (FIXME: add talk url here once it's posted).
+
+Talk Summary
+============
+
+* `South <http://south.aeracode.org/>`_ is an awesome tool for tracking and automating database schema and data changes.
+* The South website at http://south.aeracode.org/ is a great resource for documentation and tutorials.
+* Automating migrations eases team based development, deployment, and makes continuous integration possible.
+* Don't start using a schema migration tool until you have data that you care about.  Start with db resets and test data generation scripts.
+* Schema changes and data changes need to contained in separate migrations.
+* Automated migrations are great but always check their results and don't be afraid to change things.
+* Something still suck (i.e. doing major changes with table inheritance) but these are nasty corner cases no matter how you handle them.
+* Always use the ORM freezer for data migrations.
+* Always declare dependencies when making changes which reference data outside the current app.
