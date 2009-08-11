@@ -4,6 +4,9 @@ from django.db import models
 from accounts.models import *
 
 class Migration:
+    depends_on = (
+        ('addresses', '0003_fix_email_data'),
+    )
     
     def forwards(self, orm):
         
