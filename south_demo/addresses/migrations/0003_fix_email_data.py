@@ -1,16 +1,26 @@
 
 from south.db import db
 from django.db import models
+from django.db.models import Q
 from addresses.models import *
 
 class Migration:
     
     def forwards(self, orm):
-        "Write your forwards migration here"
+        Contact = orm['addresses.contact']
+        empty_emails = Contact.objects.filter(Q(email__isnull=True)|Q(email=''))
+        for contact in empty_emails:
+            print "Fixing %s" % contact
+            contact.email = 'fixme@somedomain.com'
+            contact.save()
     
     
     def backwards(self, orm):
-        "Write your backwards migration here"
+        Contact = orm['addresses.contact']
+        fixed_contacts = Contact.objects.filter(email='fixme@somedomain.com')
+        for contact in fixed_contacts:
+            contact.email = None
+            contact.save()
     
     
     models = {
