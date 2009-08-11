@@ -1,0 +1,6 @@
+django
+south
+psycopg2
+werkzeug
+
+-e git+git://github.com/SeanOC/django-extensions.git#egg=django-extensions
