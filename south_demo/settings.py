@@ -80,6 +80,7 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	# Third-party
 	'django_extensions',
+	'south',
 	# Local
 	'addresses',
 )
