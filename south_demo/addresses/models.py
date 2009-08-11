@@ -11,6 +11,7 @@ class Contact(models.Model):
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
 	book = models.ForeignKey(Book)
+	email = models.EmailField(null=True, blank=True)
 	
 	def __unicode__(self):
 		return u'%s %s' % (self.first_name, self.last_name)
