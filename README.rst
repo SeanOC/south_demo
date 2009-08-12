@@ -19,7 +19,8 @@ Run the following commands to get up and running with the demo app::
 Talk Video
 ==========
 
-To see a recording of the talk you can check it out at (FIXME: add talk url here once it's posted).
+To see a recording of the talk you can check it out at http://vimeo.com/6059269.
+
 
 Talk Summary
 ============
